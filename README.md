@@ -26,6 +26,8 @@ Installation of Requirements:
 
 
 cd GIF-TO-BOOT-ANIMATION
+
+
 pip install -r requirements.txt
 
 

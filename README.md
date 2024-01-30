@@ -37,7 +37,9 @@ Create Executable File:
 pip install pyinstaller
 
 
-pyinstaller --noconfirm --onefile --windowed --icon "%cd%/loading.ico" --name "GIF TO BOOT ANIMATION" --add-data "%cd%/create_boot_animation.py;." --add-data "%cd%/gifextract.py;." --add-data "%cd%/loading.ico;." --add-data "C:/Users/shash/AppData/Roaming/Python/Python312/site-packages/customtkinter;customtkinter/"  "%cd%/boot_to_gif.py"
+python setup.py    (FOR CREATE EXE FILE)
+
+**Note:** The 'customtkinter' folder is essential for PyInstaller, as it contains custom modifications and enhancements to the standard Tkinter library. PyInstaller requires this folder to ensure the proper functioning of the Python script when it is compiled into a standalone executable. The contents of the 'customtkinter' folder are carefully curated to address specific issues or provide additional functionalities that may not be present in the default Tkinter library.
 
 
 

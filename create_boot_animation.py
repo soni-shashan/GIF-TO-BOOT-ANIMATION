@@ -13,7 +13,7 @@ def create(source, width, height, fps, save_to):
         source_dir = source
     elif os.path.isfile(source) and get_extension(source) == "gif":
         temp_dir = tempfile.TemporaryDirectory()
-        gifextract.processImage(source, temp_dir.name,width,height)
+        gifextract.processImage(source, temp_dir.name)
         source_dir = temp_dir.name
     else:
         print("Error: invalid source path: " + source)

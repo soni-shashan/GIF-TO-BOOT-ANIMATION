@@ -1,8 +1,6 @@
 from PIL import Image
 import os
 
-
-
 def analyseImage(path):
     """
     Pre-process pass over the image to determine the mode (full or additive).
@@ -31,14 +29,10 @@ def analyseImage(path):
     return results
 
 
-def processImage(path, output_folder,new_width, new_height):
+def processImage(path, output_folder):
     """
     Iterate the GIF, extracting each frame.
     """
-    if not isinstance(new_width, int):
-        new_width=int(new_width)
-    if not isinstance(new_height, int):
-        new_height=int(new_height)
     mode = analyseImage(path)['mode']
     gif = Image.open(path)
 
@@ -52,7 +46,7 @@ def processImage(path, output_folder,new_width, new_height):
 
         adjusted_frame_number = (frame_number - 1) % gif.n_frames
 
-        new_frame = Image.new('RGBA', (frame.width,frame.height))
+        new_frame = Image.new('RGBA', frame.size)
 
         if mode == 'partial':
             new_frame.paste(frame)
@@ -63,3 +57,4 @@ def processImage(path, output_folder,new_width, new_height):
         new_frame.save(result_frame_path, 'PNG')
 
     gif.close()
+    

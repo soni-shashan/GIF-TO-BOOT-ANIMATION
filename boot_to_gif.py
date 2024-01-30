@@ -14,6 +14,8 @@ import shutil
 import signal
 import create_boot_animation
 
+icon='loading.ico'
+
 def goTo():
     if create_boot_animation.create(file_path,width,hight,fps,'OUTPUT'):
         os.remove('OUTPUT/desc.txt')
@@ -103,7 +105,7 @@ if __name__=='__main__':
     app.title('GIF TO BOOT ANIMATITON')
     app.protocol("WM_DELETE_WINDOW", on_closing)
     set_appearance_mode("light")
-    app.iconbitmap(sys._MEIPASS+"\loading.ico")
+    app.iconbitmap(sys._MEIPASS+"/"+icon)
     btn=CTkButton(master=app,text='Select Gif',corner_radius=20,fg_color="#C850C0",hover_color="#4158D0",border_color="#000000",border_width=2,width=150,height=50,command=select_gif_file)
     btn.place(relx=0.5,rely=0.1,anchor="center")
     app.mainloop()

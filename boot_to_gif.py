@@ -15,6 +15,7 @@ import signal
 import create_boot_animation
 
 icon='loading.ico'
+name='GIF TO BOOT ANIMATION'
 
 def goTo():
     if create_boot_animation.create(file_path,width,hight,fps,'OUTPUT'):
@@ -102,7 +103,7 @@ if __name__=='__main__':
     app.geometry("512x512")
     app.minsize(512,512)
     app.maxsize(512,512)
-    app.title('GIF TO BOOT ANIMATITON')
+    app.title(name)
     app.protocol("WM_DELETE_WINDOW", on_closing)
     set_appearance_mode("light")
     app.iconbitmap(sys._MEIPASS+"/"+icon)

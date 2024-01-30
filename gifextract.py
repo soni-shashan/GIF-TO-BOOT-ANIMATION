@@ -52,7 +52,7 @@ def processImage(path, output_folder,new_width, new_height):
 
         adjusted_frame_number = (frame_number - 1) % gif.n_frames
 
-        new_frame = Image.new('RGBA', frame.size)
+        new_frame = Image.new('RGBA', (frame.width,frame.height))
 
         if mode == 'partial':
             new_frame.paste(frame)

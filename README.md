@@ -36,6 +36,10 @@ Create Executable File:
 
 python setup.py    (FOR CREATE EXE FILE)
 
+
+**Remark:** Modify the executable file name and icon by editing the setup.py file. Customize the GUI window name and icon by making changes to the boot_to_gif.py file.
+
+
 **Note:** The 'customtkinter' folder is essential for PyInstaller, as it contains custom modifications and enhancements to the standard Tkinter library. PyInstaller requires this folder to ensure the proper functioning of the Python script when it is compiled into a standalone executable. The contents of the 'customtkinter' folder are carefully curated to address specific issues or provide additional functionalities that may not be present in the default Tkinter library.
 
 

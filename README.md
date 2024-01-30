@@ -64,8 +64,6 @@ python setup.py    (FOR CREATE EXE FILE)
 3.Pip
 
 
-4.Pyinstaller
-
 ## Contributions
 
 Contributions are welcome! If you have suggestions, improvements, or bug fixes, feel free to open an issue or submit a pull request.

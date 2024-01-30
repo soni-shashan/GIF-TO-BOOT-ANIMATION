@@ -52,14 +52,12 @@ def processImage(path, output_folder,new_width, new_height):
 
         adjusted_frame_number = (frame_number - 1) % gif.n_frames
 
-        resized_frame = frame.resize((new_width, new_height), Image.BOX)
-
-        new_frame = Image.new('RGBA', (new_width,new_height))
+        new_frame = Image.new('RGBA', frame.size)
 
         if mode == 'partial':
-            new_frame.paste(resized_frame)
+            new_frame.paste(frame)
 
-        new_frame.paste(resized_frame, (0, 0), resized_frame)
+        new_frame.paste(frame, (0, 0), frame)
 
         result_frame_path = os.path.join(output_folder, f"{adjusted_frame_number:05d}.png")
         new_frame.save(result_frame_path, 'PNG')

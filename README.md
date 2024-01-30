@@ -15,39 +15,48 @@ Brief description or tagline about your project.
 
 ## Introduction
 
-Provide a brief overview of your project, explaining what it does, its purpose, and any key features.
+This Python-based tool allows users to convert GIF files into boot animations for Android devices. It simplifies the process by providing a user-friendly interface and straightforward commands.
 
 ## Features
 
-Highlight the key features and functionalities of your project.
+Clone Repository:
 
-## Getting Started
+git clone https://github.com/soni-shashan/GIF-TO-BOOT-ANIMATION.git
 
-Guide users on how to get started with your project. Include information about prerequisites and installation steps.
+Installation of Requirements:
 
-### Prerequisites
+cd GIF-TO-BOOT-ANIMATION
+pip install -r requirements.txt
 
-List any software, libraries, or tools that users need to have installed before they can use your project.
 
-### Installation
+Create Executable File:
 
-Provide step-by-step instructions on how to install your project. Include any configuration steps if necessary.
+pip install pyinstaller
+pyinstaller --noconfirm --onefile --windowed --icon "%cd%/loading.ico" --name "GIF TO BOOT ANIMATION" --add-data "%cd%/create_boot_animation.py;." --add-data "%cd%/gifextract.py;." --add-data "%cd%/loading.ico;." --add-data "C:/Users/shash/AppData/Roaming/Python/Python312/site-packages/customtkinter;customtkinter/"  "%cd%/boot_to_gif.py"
+
+
 
 ## Usage
 
-Offer clear instructions on how users can use your project. Provide code snippets or examples to demonstrate usage.
+1.Clone the repository using the provided git clone command.
+2.Navigate to the project directory.
+3.Install required libraries using pip.
+4.Use Pyinstaller to create an executable file for easy execution.
 
-## Contributing
+## Requirements
 
-Encourage others to contribute to your project. Provide guidelines for how they can do so, including information about the issue tracker and pull requests.
+1.Git
+2.Python 3.12
+3.Pip
+4.Pyinstaller
 
-## License
+## Contributions
 
-Specify the license under which your project is distributed. For example, you might choose the MIT License. Include a link to the license file in your repository.
+Contributions are welcome! If you have suggestions, improvements, or bug fixes, feel free to open an issue or submit a pull request.
 
 ## Acknowledgments
 
-Give credit to any external libraries, resources, or contributors that have influenced or helped your project.
+Special thanks to soni-shashan for creating the original repository.
 
 ---
-**Note:** Replace the placeholder text with your project-specific details. Include any additional sections that are relevant to your project.
+**Note:** Replace paths and details according to your specific Python version and environment.

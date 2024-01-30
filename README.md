@@ -21,62 +21,6 @@ Clone Repository:
 
 git clone https://github.com/soni-shashan/GIF-TO-BOOT-ANIMATION.git
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copy Button Example</title>
-
-    <!-- Include Clipboard.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
-
-    <!-- Style for the copy button (optional) -->
-    <style>
-        .copy-button {
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Content to be copied -->
-    <div id="copy-text">
-    git clone https://github.com/soni-shashan/GIF-TO-BOOT-ANIMATION.git
-    </div>
-
-    <!-- Copy button -->
-    <button class="copy-button" data-clipboard-target="#copy-text">Copy Text</button>
-
-    <!-- Initialize Clipboard.js -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var clipboard = new ClipboardJS('.copy-button');
-
-            clipboard.on('success', function (e) {
-                console.info('Text copied to clipboard:', e.text);
-            });
-
-            clipboard.on('error', function (e) {
-                console.error('Unable to copy text to clipboard:', e.action);
-            });
-        });
-    </script>
-
-</body>
-</html>
-
-
 
 Installation of Requirements:
 

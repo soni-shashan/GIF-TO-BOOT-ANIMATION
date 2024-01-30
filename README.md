@@ -1,6 +1,6 @@
-# Project Name
+# GIF to Boot Animation Converter
 
-Brief description or tagline about your project.
+The GIF to Boot Animation Converter is a Python-based tool designed to simplify the process of converting GIF files into boot animations for Android devices. This user-friendly tool provides a straightforward interface and commands, making it accessible for users who want to customize their device's boot animation.
 
 ## Table of Contents
 - [Introduction](#introduction)

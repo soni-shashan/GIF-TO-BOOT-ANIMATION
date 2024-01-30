@@ -19,22 +19,22 @@ This Python-based tool allows users to convert GIF files into boot animations fo
 Clone Repository:
 
 
-git clone https://github.com/soni-shashan/GIF-TO-BOOT-ANIMATION.git
+1. git clone https://github.com/soni-shashan/GIF-TO-BOOT-ANIMATION.git
 
 
 Installation of Requirements:
 
 
-cd GIF-TO-BOOT-ANIMATION
+2. cd GIF-TO-BOOT-ANIMATION
 
 
-pip install -r requirements.txt
+3. pip install -r requirements.txt
 
 
 Create Executable File:
 
 
-python setup.py    (FOR CREATE EXE FILE)
+4. python setup.py    (FOR CREATE EXE FILE)
 
 
 **Remark:** Modify the executable file name and icon by editing the setup.py file. Customize the GUI window name and icon by making changes to the boot_to_gif.py file, provide python version in setup.py

@@ -47,7 +47,11 @@ def click_sumbit():
 
     global command,information,file_path
     file_path=file_path.replace("/","\\\\")
-    command=f"{sys._MEIPASS}/python {sys._MEIPASS}/create_boot_animation.py \"{file_path}\" {width} {hight} {fps} output -zip"
+    if hasattr(sys, '_MEIPASS'):
+        command=f"{sys._MEIPASS}/python {sys._MEIPASS}/create_boot_animation.py \"{file_path}\" {width} {hight} {fps} output -zip"
+    else:
+        command=f"{os.getcwd()}/python {os.getcwd()}/create_boot_animation.py \"{file_path}\" {width} {hight} {fps} output -zip"
+
     label.destroy()
     width_text.destroy()
     width_entry.destroy()
@@ -68,7 +72,8 @@ def select_gif_file():
     if file_path!="":
         print("Selected GIF file: ", file_path)
         btn.destroy()
-
+        labelx.destroy()
+        
         label = CTkLabel(app, text="Selected GIF file: "+ file_path, fg_color="transparent",font=('arial',14))
         label.place(relx=0.5, rely=0.1, anchor="center")
 
@@ -106,7 +111,12 @@ if __name__=='__main__':
     app.title(name)
     app.protocol("WM_DELETE_WINDOW", on_closing)
     set_appearance_mode("light")
-    app.iconbitmap(sys._MEIPASS+"/"+icon)
+    if hasattr(sys, '_MEIPASS'):
+        app.iconbitmap(sys._MEIPASS+"/"+icon)
+    else:
+        app.iconbitmap(os.getcwd()+"/"+icon)
     btn=CTkButton(master=app,text='Select Gif',corner_radius=20,fg_color="#C850C0",hover_color="#4158D0",border_color="#000000",border_width=2,width=150,height=50,command=select_gif_file)
     btn.place(relx=0.5,rely=0.1,anchor="center")
+    labelx=CTkLabel(app,text="Ensure that your GIF size is equal to the screen size.",fg_color="transparent",font=('arial',18))
+    labelx.place(relx=0.5,rely=0.25,anchor="center")
     app.mainloop()
